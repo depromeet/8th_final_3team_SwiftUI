@@ -30,31 +30,20 @@ class SplashViewModel: ObservableObject {
         let zeps1 = Publishers.Zip3(한식, 양식, 중식)
         let zeps2 = Publishers.Zip(일식, 분식)
         
-//        Publishers.Zip(zeps1, zeps2)
-//            .sink { (<#Subscribers.Completion<Publishers.Zip3<AnyPublisher<PlaceModel, APIError>, AnyPublisher<PlaceModel, APIError>, AnyPublisher<PlaceModel, APIError>>.Failure>#>) in
-//                <#code#>
-//            } receiveValue: { (<#(Publishers.Zip3<AnyPublisher<PlaceModel, APIError>, AnyPublisher<PlaceModel, APIError>, AnyPublisher<PlaceModel, APIError>>.Output, Publishers.Zip<AnyPublisher<PlaceModel, APIError>, AnyPublisher<PlaceModel, APIError>>.Output)#>) in
-//                <#code#>
-//            }
-
-        
-        let cancellable = Publishers.Zip(zeps1, zeps2)
+        let aroundRequest = Publishers.Zip(zeps1, zeps2)
             .sink { completion in
                 // 화면 이도
-                print(completion)
+                print("completion: ", completion)
             } receiveValue: { (res1, res2) in
                 //FIXME: 왜 같지?
-                
-                print("1 : \(res1.0.documents?.first?.addressName)")
-                print("2 : \(res1.1.documents?.first?.addressName)")
-                print("3 : \(res1.2.documents?.first?.addressName)")
-                print("4 : \(res2.0.documents?.first?.addressName)")
-                print("5 : \(res2.1.documents?.first?.addressName)")
-                
+                print("1 : \(res1.0.meta?.totalCount)")
+                print("2 : \(res1.1.meta?.totalCount)")
+                print("3 : \(res1.2.meta?.totalCount)")
+                print("4 : \(res2.0.meta?.totalCount)")
+                print("5 : \(res2.1.meta?.totalCount)")
                 
             }
-        cancellables.insert(cancellable)
-
+        cancellables.insert(aroundRequest)
 
 //            .zip(양식, 중식, 일식, 분식)
 //            .handleEvents { (subscription) in
