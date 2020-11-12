@@ -14,7 +14,7 @@ struct KakaoMapView: UIViewRepresentable {
         let view = MTMapView(frame: .zero)
         view.setZoomLevel(MTMapZoomLevel(1.0), animated: false)
         view.showCurrentLocationMarker = true
-        view.currentLocationTrackingMode = .onWithoutHeading        
+        view.currentLocationTrackingMode = .onWithoutHeading
 //        view.addCircle(circle())
         
         return view
@@ -35,4 +35,10 @@ struct KakaoMapView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: MTMapView, context: Context) {}
+    
+    func test() {
+        
+        print("24kl23kl2k3")
+        
+    }
 }

@@ -8,5 +8,6 @@
 #ifndef AnythingTurningBoard_Bridging_Header_h
 #define AnythingTurningBoard_Bridging_Header_h
 
+#import <DaumMap/MTMapView.h>
 
 #endif /* AnythingTurningBoard_Bridging_Header_h */
