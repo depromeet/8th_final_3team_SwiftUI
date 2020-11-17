@@ -6,21 +6,37 @@
 //
 
 import SwiftUI
+import Combine
 
 struct MainView: View {
     
-    @ObservedObject var locationManager = LocationManager()
-    //MARK: viewModel
-//    @ObservedObject var viewModel = PokemonListViewModel()
-    var latitude: String  { return("\(locationManager.location?.coordinate.latitude ?? 0)") }
-    var longitude: String { return("\(locationManager.location?.coordinate.longitude ?? 0)") }
-    var placemark: String { return("\(locationManager.placemark?.description ?? "XXX")") }
-    var status: String    { return("\(locationManager.status)") }
+    @EnvironmentObject private var viewModel: SplashViewModel
     
     var body: some View {
+//        self.background(Color.white)
+        VStack(spacing: 0) {
+            LocationView()
+                .background(Color.black)
+//                .edgesIgnoringSafeArea(.top)
+                .frame(height: 88)
+//                .edgesIgnoringSafeArea(.leading)
+//                .edgesIgnoringSafeArea(.trailing)
+
+            NamingView()
+                .frame(height: 172)
+            RouletteView()
+                .frame(height: 325)
+            CategoryView()
+//                .edgesIgnoringSafeArea(.leading).offset(x: 20)
+//                .edgesIgnoringSafeArea(.bottom)
+//                .edgesIgnoringSafeArea(.trailing).offset(x: -20)
+                .frame(height: 206)
+        }
+        .edgesIgnoringSafeArea(.all)
+//        .foregroundColor(.black)
         
-        
-        ProgressView()
+//        ProgressView()
+    
 //            .onAppear(perform: {
 ////                self.viewModel
 //            })

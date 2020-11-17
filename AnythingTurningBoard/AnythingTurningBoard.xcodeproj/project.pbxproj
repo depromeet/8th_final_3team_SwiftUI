@@ -3,13 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B8494D7E255A1B0700E79744 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8494D7D255A1B0700E79744 /* SplashView.swift */; };
 		B8494D83255A1B4F00E79744 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8494D82255A1B4F00E79744 /* SplashViewModel.swift */; };
 		B84B18D1255ABFCA00995E60 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84B18D0255ABFCA00995E60 /* Model.swift */; };
+		B861ABC9255D04C50059F260 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B861ABC8255D04C50059F260 /* MapKit.framework */; };
+		B861ABFA255D06D60059F260 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FBFF522559653F003BCF08 /* DaumMap.framework */; };
+		B872FFDD25624AD20086E222 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872FFDC25624AD20086E222 /* LocationView.swift */; };
+		B872FFE325624AEE0086E222 /* NamingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872FFE225624AEE0086E222 /* NamingView.swift */; };
+		B872FFEB25624AFF0086E222 /* RouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872FFEA25624AFF0086E222 /* RouletteView.swift */; };
+		B872FFF025624B0B0086E222 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872FFEF25624B0B0086E222 /* CategoryView.swift */; };
+		B87BC596255D5A720069BE8E /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87BC595255D5A720069BE8E /* LottieView.swift */; };
+		B87BC59F255D5AEF0069BE8E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B87BC59E255D5AEF0069BE8E /* Lottie */; };
+		B87BC5A7255D5B620069BE8E /* sushi_belt.json in Resources */ = {isa = PBXBuildFile; fileRef = B87BC5A6255D5B620069BE8E /* sushi_belt.json */; };
 		B8916CF02559679500C8B067 /* KaKaoMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8916CEF2559679500C8B067 /* KaKaoMap.swift */; };
 		B8916CF92559693B00C8B067 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8916CF82559693B00C8B067 /* Metal.framework */; };
 		B8916CFD2559695200C8B067 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FBFF5F255965F5003BCF08 /* libc++.tbd */; };
@@ -35,7 +44,6 @@
 		B8FBFF2025595468003BCF08 /* AnyThingEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FBFF1F25595468003BCF08 /* AnyThingEndpoint.swift */; };
 		B8FBFF2A255956DC003BCF08 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FBFF29255956DC003BCF08 /* MainView.swift */; };
 		B8FBFF3225595719003BCF08 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FBFF3125595719003BCF08 /* MainViewModel.swift */; };
-		B8FBFF532559653F003BCF08 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FBFF522559653F003BCF08 /* DaumMap.framework */; };
 		B8FBFF5A255965DD003BCF08 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FBFF59255965DD003BCF08 /* SystemConfiguration.framework */; };
 		B8FBFF5C255965E5003BCF08 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FBFF5B255965E5003BCF08 /* CoreLocation.framework */; };
 		B8FBFF5E255965ED003BCF08 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FBFF5D255965ED003BCF08 /* QuartzCore.framework */; };
@@ -62,6 +70,13 @@
 		B8494D7D255A1B0700E79744 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		B8494D82255A1B4F00E79744 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		B84B18D0255ABFCA00995E60 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B861ABC8255D04C50059F260 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B872FFDC25624AD20086E222 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		B872FFE225624AEE0086E222 /* NamingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamingView.swift; sourceTree = "<group>"; };
+		B872FFEA25624AFF0086E222 /* RouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteView.swift; sourceTree = "<group>"; };
+		B872FFEF25624B0B0086E222 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		B87BC595255D5A720069BE8E /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		B87BC5A6255D5B620069BE8E /* sushi_belt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = sushi_belt.json; path = ../../../sushi_belt.json; sourceTree = "<group>"; };
 		B8916CEF2559679500C8B067 /* KaKaoMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoMap.swift; sourceTree = "<group>"; };
 		B8916CF82559693B00C8B067 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		B8916D0A25596C0F00C8B067 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -106,13 +121,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B861ABC9255D04C50059F260 /* MapKit.framework in Frameworks */,
 				B8916D052559696700C8B067 /* libsqlite3.tbd in Frameworks */,
 				B8916D012559695E00C8B067 /* libxml2.tbd in Frameworks */,
 				B8916CFD2559695200C8B067 /* libc++.tbd in Frameworks */,
 				B8916CF92559693B00C8B067 /* Metal.framework in Frameworks */,
+				B87BC59F255D5AEF0069BE8E /* Lottie in Frameworks */,
 				B8FBFF5E255965ED003BCF08 /* QuartzCore.framework in Frameworks */,
 				B8FBFF5C255965E5003BCF08 /* CoreLocation.framework in Frameworks */,
-				B8FBFF532559653F003BCF08 /* DaumMap.framework in Frameworks */,
+				B861ABFA255D06D60059F260 /* DaumMap.framework in Frameworks */,
 				B8FBFF5A255965DD003BCF08 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +154,8 @@
 		067D3D78F565D84D4B971180 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B8FBFF522559653F003BCF08 /* DaumMap.framework */,
+				B861ABC8255D04C50059F260 /* MapKit.framework */,
 				B8916CF82559693B00C8B067 /* Metal.framework */,
 				B8FBFF6125596609003BCF08 /* libsqlite3.tbd */,
 				B8FBFF60255965FF003BCF08 /* libxml2.tbd */,
@@ -149,20 +168,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6C7BE164A87FE0096C84D34C /* Pods */ = {
+		B8494D7C255A1AE400E79744 /* SplashScene */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		B8494D7C255A1AE400E79744 /* Splash */ = {
-			isa = PBXGroup;
-			children = (
+				B87BC595255D5A720069BE8E /* LottieView.swift */,
 				B8494D7D255A1B0700E79744 /* SplashView.swift */,
 				B8494D82255A1B4F00E79744 /* SplashViewModel.swift */,
 			);
-			path = Splash;
+			path = SplashScene;
+			sourceTree = "<group>";
+		};
+		B861ABBE255D04050059F260 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B87BC5A6255D5B620069BE8E /* sushi_belt.json */,
+				B8FBFF69255966A7003BCF08 /* AnythingTurningBoard-Bridging-Header.h */,
+				B8B5F85D2543FDFA00C8ACC3 /* AppDelegate.swift */,
+				B8B5F85F2543FDFA00C8ACC3 /* SceneDelegate.swift */,
+				B8B5F8632543FDFA00C8ACC3 /* Assets.xcassets */,
+				B8B5F8682543FDFA00C8ACC3 /* LaunchScreen.storyboard */,
+				B8B5F86B2543FDFA00C8ACC3 /* Info.plist */,
+				B8B55D4E254D445700BC1E2A /* RingModel.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B872FFE125624AD70086E222 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				B872FFDC25624AD20086E222 /* LocationView.swift */,
+				B872FFE225624AEE0086E222 /* NamingView.swift */,
+				B872FFEA25624AFF0086E222 /* RouletteView.swift */,
+				B872FFEF25624B0B0086E222 /* CategoryView.swift */,
+			);
+			path = SubView;
 			sourceTree = "<group>";
 		};
 		B8916D0925596BFD00C8B067 /* Map */ = {
@@ -186,12 +225,10 @@
 		B8B5F8512543FDF900C8ACC3 = {
 			isa = PBXGroup;
 			children = (
-				B8FBFF522559653F003BCF08 /* DaumMap.framework */,
 				B8B5F85C2543FDFA00C8ACC3 /* AnythingTurningBoard */,
 				B8B5F8732543FDFA00C8ACC3 /* AnythingTurningBoardTests */,
 				B8B5F87E2543FDFA00C8ACC3 /* AnythingTurningBoardUITests */,
 				B8B5F85B2543FDFA00C8ACC3 /* Products */,
-				6C7BE164A87FE0096C84D34C /* Pods */,
 				067D3D78F565D84D4B971180 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -209,21 +246,15 @@
 		B8B5F85C2543FDFA00C8ACC3 /* AnythingTurningBoard */ = {
 			isa = PBXGroup;
 			children = (
-				B8494D7C255A1AE400E79744 /* Splash */,
-				B8916D0925596BFD00C8B067 /* Map */,
+				B861ABBE255D04050059F260 /* Resource */,
+				B8494D7C255A1AE400E79744 /* SplashScene */,
 				B8FBFF282559566D003BCF08 /* MainScene */,
+				B8916D0925596BFD00C8B067 /* Map */,
 				B8FBFF2725595581003BCF08 /* ViewModel */,
 				B8FBFEF92559510D003BCF08 /* Network */,
 				B8B55D3C254D3A2A00BC1E2A /* View */,
-				B8B5F85D2543FDFA00C8ACC3 /* AppDelegate.swift */,
-				B8B5F85F2543FDFA00C8ACC3 /* SceneDelegate.swift */,
 				B8B5F8612543FDFA00C8ACC3 /* ContentView.swift */,
-				B8B5F8632543FDFA00C8ACC3 /* Assets.xcassets */,
-				B8B5F8682543FDFA00C8ACC3 /* LaunchScreen.storyboard */,
-				B8B5F86B2543FDFA00C8ACC3 /* Info.plist */,
-				B8B55D4E254D445700BC1E2A /* RingModel.swift */,
 				B8B5F8652543FDFA00C8ACC3 /* Preview Content */,
-				B8FBFF69255966A7003BCF08 /* AnythingTurningBoard-Bridging-Header.h */,
 			);
 			path = AnythingTurningBoard;
 			sourceTree = "<group>";
@@ -302,6 +333,7 @@
 		B8FBFF282559566D003BCF08 /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
+				B872FFE125624AD70086E222 /* SubView */,
 				B8FBFF29255956DC003BCF08 /* MainView.swift */,
 				B8FBFF3125595719003BCF08 /* MainViewModel.swift */,
 			);
@@ -324,6 +356,9 @@
 			dependencies = (
 			);
 			name = AnythingTurningBoard;
+			packageProductDependencies = (
+				B87BC59E255D5AEF0069BE8E /* Lottie */,
+			);
 			productName = AnythingTurningBoard;
 			productReference = B8B5F85A2543FDFA00C8ACC3 /* AnythingTurningBoard.app */;
 			productType = "com.apple.product-type.application";
@@ -395,6 +430,9 @@
 				Base,
 			);
 			mainGroup = B8B5F8512543FDF900C8ACC3;
+			packageReferences = (
+				B87BC59D255D5AEF0069BE8E /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = B8B5F85B2543FDFA00C8ACC3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -412,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8B5F86A2543FDFA00C8ACC3 /* LaunchScreen.storyboard in Resources */,
+				B87BC5A7255D5B620069BE8E /* sushi_belt.json in Resources */,
 				B8B5F8672543FDFA00C8ACC3 /* Preview Assets.xcassets in Resources */,
 				B8B5F8642543FDFA00C8ACC3 /* Assets.xcassets in Resources */,
 			);
@@ -442,20 +481,25 @@
 				B8FBFF2A255956DC003BCF08 /* MainView.swift in Sources */,
 				B8494D7E255A1B0700E79744 /* SplashView.swift in Sources */,
 				B8494D83255A1B4F00E79744 /* SplashViewModel.swift in Sources */,
+				B872FFDD25624AD20086E222 /* LocationView.swift in Sources */,
 				B8B55D3E254D3A4700BC1E2A /* TurningBoard.swift in Sources */,
 				B8B5F85E2543FDFA00C8ACC3 /* AppDelegate.swift in Sources */,
 				B8916D0B25596C0F00C8B067 /* LocationManager.swift in Sources */,
+				B87BC596255D5A720069BE8E /* LottieView.swift in Sources */,
 				B8FBFF1125595353003BCF08 /* APIError.swift in Sources */,
 				B8FBFF1B25595433003BCF08 /* AnyThingService.swift in Sources */,
 				B8FBFF0C2559533B003BCF08 /* RequestBuilder.swift in Sources */,
 				B8FBFF3225595719003BCF08 /* MainViewModel.swift in Sources */,
 				B8B55D4F254D445700BC1E2A /* RingModel.swift in Sources */,
+				B872FFF025624B0B0086E222 /* CategoryView.swift in Sources */,
 				B8B5F8602543FDFA00C8ACC3 /* SceneDelegate.swift in Sources */,
 				B8916CF02559679500C8B067 /* KaKaoMap.swift in Sources */,
+				B872FFEB25624AFF0086E222 /* RouletteView.swift in Sources */,
 				B8FBFF2025595468003BCF08 /* AnyThingEndpoint.swift in Sources */,
 				B8B5F8622543FDFA00C8ACC3 /* ContentView.swift in Sources */,
 				B84B18D1255ABFCA00995E60 /* Model.swift in Sources */,
 				B8FBFF072559531D003BCF08 /* APIService.swift in Sources */,
+				B872FFE325624AEE0086E222 /* NamingView.swift in Sources */,
 				B8FBFEFF25595304003BCF08 /* APISession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,14 +677,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = AnythingTurningBoard/Info.plist;
+				INFOPLIST_FILE = AnythingTurningBoard/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = qbbang.AnythingTurningBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/kyuhyeon/Documents/Depromeet8th/8th_final_3team_SwiftUI/AnythingTurningBoard/AnythingTurningBoard/AnythingTurningBoard-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/kyuhyeon/Documents/Depromeet8th/8th_final_3team_SwiftUI/AnythingTurningBoard/AnythingTurningBoard/Resource/AnythingTurningBoard-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -660,14 +704,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = AnythingTurningBoard/Info.plist;
+				INFOPLIST_FILE = AnythingTurningBoard/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = qbbang.AnythingTurningBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/kyuhyeon/Documents/Depromeet8th/8th_final_3team_SwiftUI/AnythingTurningBoard/AnythingTurningBoard/AnythingTurningBoard-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/kyuhyeon/Documents/Depromeet8th/8th_final_3team_SwiftUI/AnythingTurningBoard/AnythingTurningBoard/Resource/AnythingTurningBoard-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -797,6 +841,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B87BC59D255D5AEF0069BE8E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B87BC59E255D5AEF0069BE8E /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B87BC59D255D5AEF0069BE8E /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B8B5F8522543FDF900C8ACC3 /* Project object */;
 }

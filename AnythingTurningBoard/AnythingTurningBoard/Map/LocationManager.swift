@@ -9,18 +9,13 @@ import Foundation
 import CoreLocation
 import Combine
 
-class LocationManager: NSObject, ObservableObject {
-    private let locationManager = CLLocationManager()
+final class LocationManager: NSObject, ObservableObject {
+    
+    @Published var status: CLAuthorizationStatus? = nil
+    @Published var coordinate: CLLocationCoordinate2D? = nil
+    @Published var placemark: String? = nil
     private let geocoder = CLGeocoder()
-    let objectWillChange = PassthroughSubject<Void, Never>()
-    
-    @Published var status: CLAuthorizationStatus? {
-        willSet { objectWillChange.send() }
-    }
-    
-    @Published var location: CLLocation? {
-        willSet { objectWillChange.send() }
-    }
+    private let locationManager = CLLocationManager()
     
     override init() {
         super.init()
@@ -31,20 +26,6 @@ class LocationManager: NSObject, ObservableObject {
         self.locationManager.startUpdatingLocation()
     }
     
-    @Published var placemark: CLPlacemark? {
-        willSet { objectWillChange.send() }
-    }
-    
-    private func geocode() {
-        guard let location = self.location else { return }
-        geocoder.reverseGeocodeLocation(location, completionHandler: { (places, error) in
-            if error == nil {
-                self.placemark = places?[0]
-            } else {
-                self.placemark = nil
-            }
-        })
-    }
 }
 
 extension LocationManager: CLLocationManagerDelegate {
@@ -54,7 +35,18 @@ extension LocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        self.location = location
-        self.geocode()
+        self.coordinate = location.coordinate
+        geocoder.reverseGeocodeLocation(location, completionHandler: { (places, error) in
+            if error == nil {
+                
+//                self.placemark =
+                guard let state = places?.first?.administrativeArea, let city = places?.first?.locality, let addr1 = places?.first?.name else { return }
+                
+                self.placemark = "\(state) \(city) \(addr1)"
+                
+            } else {
+                self.placemark = nil
+            }
+        })
     }
 }
