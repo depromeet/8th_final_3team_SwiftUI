@@ -10,36 +10,35 @@ import SwiftUI
 struct LocationView: View {
     
     @StateObject private var locationManager = LocationManager()
+//    private let currentLocation: 
     
     var body: some View {
         HStack {
-            Button(action: {
-                //action
-            }) {
-                Text("네모")
-            }
-            
-            Spacer(minLength: 55)
+            Image("logo")
+                .frame(width: 32, height: 32, alignment: .center)
+                .padding(.leading, 20.0)
+            Spacer()
             
             Button(action: {
                 //action
             }) {
-                Text("\(locationManager.placemark ?? "")")
-                    .foregroundColor(.white)
-                    .font(.custom("AppleSDGothicNeo-Medium", size: 16))
-//                    .fontWeight(.medium)
-                    .lineLimit(3)
-                    .multilineTextAlignment(.center)
+                HStack(spacing: 4) {
+                    Text("\(locationManager.placemark ?? "")")
+                        .foregroundColor(.white)
+                        .font(.custom("AppleSDGothicNeo-Medium", size: 16))
+                        .lineLimit(1)
+                        .border(Color.white, width: 1)
+                    Image("icArrowDown")
+                }
             }
-//            frame(width: .infinity, height: 24, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
-            Spacer(minLength: 55)
-            
-            Button(action: {
-                //action
-            }) {
-                Text("네모")
+            Spacer()
+            NavigationLink(destination: BlackListView()) {
+                Image("stop")
+                    .frame(width: 32, height: 32, alignment: .center)
+                    .padding(.trailing, 20.0)
             }
+            
         }
     }
 }

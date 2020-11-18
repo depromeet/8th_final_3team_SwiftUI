@@ -1,5 +1,33 @@
+[toc]
+
+
+
 # 8th_final_3team_SwiftUI
+
 iOS SwiftUI Version
+
+
+
+## 11월 18일
+
+https://unnnyong.me/2020/05/19/swiftui-view-%EC%9D%98-%EC%82%AC%EC%9D%B4%EC%A6%88-%EC%A1%B0%EC%A0%88-frame-padding-spacer/
+
+
+
+**Frame** 은 View 본인의 height, width. 사이즈를 지정할 때.
+**Padding** 은 View 의 top, bottom, leading, trailing 를 지정할 때.
+**Spacer** 는 Stack 에 소속된 View들 사이의 일정한 거리를 지정할 때.
+**GeometryReader** 는 View의 부모뷰의 사이즈를 기준으로 본인의 사이즈를 조절할 때.
+
+
+
+```swift
+//ContentView는 edgesIgnoringSafeArea 무시합니다.
+ContentView()
+.background(Color.blue.edgesIgnoringSafeArea(.bottom))
+```
+
+
 
 
 

@@ -16,33 +16,36 @@ struct CategoryView: View {
     @State var distance = 250
     
     var body: some View {
-        Group {
-            VStack {
-                HStack {
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("바로가기")
-                            .foregroundColor(.white)
-                            .font(.custom("AppleSDGothicNeo-Bold", size: 18))
-                            .frame(height: 22)
-                    })
+        VStack {
+            Color(.yellow)
+                .edgesIgnoringSafeArea(.all)
+            HStack {
+                Button(action: {
                     
-                    Spacer(minLength: 172)
-                    
-                    Button(action: {
-                        self.isSheet = true
-                    }, label: {
-                        Text("도보 \(distanceToMin(distance)) 거리")
-                            .foregroundColor(.white)
-                            .underline(true, color: .white)
-                            .font(.custom("AppleSDGothicNeo-Bold", size: 14))
-                            .frame(height: 22)
-                        Image("icDown")
-                    })
-                    .actionSheet(isPresented: $isSheet, content: actionSheet)
-                }
+                }, label: {
+                    Text("바로가기")
+                        .foregroundColor(.white)
+                        .font(.custom("AppleSDGothicNeo-Bold", size: 18))
+                        .frame(height: 22)
+                })
                 
+                Spacer(minLength: 172)
+                
+                Button(action: {
+                    self.isSheet = true
+                }, label: {
+                    Text("도보 \(distanceToMin(distance)) 거리")
+                        .foregroundColor(.white)
+                        .underline(true, color: .white)
+                        .font(.custom("AppleSDGothicNeo-Bold", size: 14))
+                        .frame(height: 22)
+                    Image("icDown")
+                })
+                .actionSheet(isPresented: $isSheet, content: actionSheet)
+            }
+            
+            
+            GeometryReader { container in
                 HStack(alignment: .center, spacing: .zero) {
                     Button(action: {
                         
@@ -187,8 +190,6 @@ struct CategoryView: View {
                     .padding(.trailing, 0)
                 }
             }
-            .background(Color.black)
-            
         }
     }
     

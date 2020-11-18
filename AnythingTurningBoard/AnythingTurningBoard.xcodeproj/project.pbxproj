@@ -25,6 +25,7 @@
 		B8916D012559695E00C8B067 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FBFF60255965FF003BCF08 /* libxml2.tbd */; };
 		B8916D052559696700C8B067 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FBFF6125596609003BCF08 /* libsqlite3.tbd */; };
 		B8916D0B25596C0F00C8B067 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8916D0A25596C0F00C8B067 /* LocationManager.swift */; };
+		B8A242F82565551700708D09 /* BlackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A242F72565551700708D09 /* BlackListView.swift */; };
 		B8B55D3E254D3A4700BC1E2A /* TurningBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B55D3D254D3A4700BC1E2A /* TurningBoard.swift */; };
 		B8B55D48254D432200BC1E2A /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B55D47254D432200BC1E2A /* Parameters.swift */; };
 		B8B55D4F254D445700BC1E2A /* RingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B55D4E254D445700BC1E2A /* RingModel.swift */; };
@@ -47,6 +48,7 @@
 		B8FBFF5A255965DD003BCF08 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FBFF59255965DD003BCF08 /* SystemConfiguration.framework */; };
 		B8FBFF5C255965E5003BCF08 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FBFF5B255965E5003BCF08 /* CoreLocation.framework */; };
 		B8FBFF5E255965ED003BCF08 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FBFF5D255965ED003BCF08 /* QuartzCore.framework */; };
+		B8FE7F552565587800053EA8 /* CustomNaviBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE7F542565587800053EA8 /* CustomNaviBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,7 @@
 		B8916CEF2559679500C8B067 /* KaKaoMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoMap.swift; sourceTree = "<group>"; };
 		B8916CF82559693B00C8B067 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		B8916D0A25596C0F00C8B067 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B8A242F72565551700708D09 /* BlackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackListView.swift; sourceTree = "<group>"; };
 		B8B55D3D254D3A4700BC1E2A /* TurningBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurningBoard.swift; sourceTree = "<group>"; };
 		B8B55D47254D432200BC1E2A /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		B8B55D4E254D445700BC1E2A /* RingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingModel.swift; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 		B8FBFF60255965FF003BCF08 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		B8FBFF6125596609003BCF08 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B8FBFF69255966A7003BCF08 /* AnythingTurningBoard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnythingTurningBoard-Bridging-Header.h"; sourceTree = "<group>"; };
+		B8FE7F542565587800053EA8 /* CustomNaviBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNaviBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,11 +254,11 @@
 				B8494D7C255A1AE400E79744 /* SplashScene */,
 				B8FBFF282559566D003BCF08 /* MainScene */,
 				B8916D0925596BFD00C8B067 /* Map */,
-				B8FBFF2725595581003BCF08 /* ViewModel */,
 				B8FBFEF92559510D003BCF08 /* Network */,
 				B8B55D3C254D3A2A00BC1E2A /* View */,
 				B8B5F8612543FDFA00C8ACC3 /* ContentView.swift */,
 				B8B5F8652543FDFA00C8ACC3 /* Preview Content */,
+				B8FE7F542565587800053EA8 /* CustomNaviBar.swift */,
 			);
 			path = AnythingTurningBoard;
 			sourceTree = "<group>";
@@ -323,19 +327,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		B8FBFF2725595581003BCF08 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		B8FBFF282559566D003BCF08 /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
 				B872FFE125624AD70086E222 /* SubView */,
 				B8FBFF29255956DC003BCF08 /* MainView.swift */,
 				B8FBFF3125595719003BCF08 /* MainViewModel.swift */,
+				B8A242F72565551700708D09 /* BlackListView.swift */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
@@ -481,8 +479,10 @@
 				B8FBFF2A255956DC003BCF08 /* MainView.swift in Sources */,
 				B8494D7E255A1B0700E79744 /* SplashView.swift in Sources */,
 				B8494D83255A1B4F00E79744 /* SplashViewModel.swift in Sources */,
+				B8FE7F552565587800053EA8 /* CustomNaviBar.swift in Sources */,
 				B872FFDD25624AD20086E222 /* LocationView.swift in Sources */,
 				B8B55D3E254D3A4700BC1E2A /* TurningBoard.swift in Sources */,
+				B8A242F82565551700708D09 /* BlackListView.swift in Sources */,
 				B8B5F85E2543FDFA00C8ACC3 /* AppDelegate.swift in Sources */,
 				B8916D0B25596C0F00C8B067 /* LocationManager.swift in Sources */,
 				B87BC596255D5A720069BE8E /* LottieView.swift in Sources */,

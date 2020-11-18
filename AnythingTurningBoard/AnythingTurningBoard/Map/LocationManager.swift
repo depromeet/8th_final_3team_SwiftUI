@@ -39,7 +39,6 @@ extension LocationManager: CLLocationManagerDelegate {
         geocoder.reverseGeocodeLocation(location, completionHandler: { (places, error) in
             if error == nil {
                 
-//                self.placemark =
                 guard let state = places?.first?.administrativeArea, let city = places?.first?.locality, let addr1 = places?.first?.name else { return }
                 
                 self.placemark = "\(state) \(city) \(addr1)"
