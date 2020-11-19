@@ -6,6 +6,58 @@
 
 iOS SwiftUI Version
 
+## 11월 19일
+
+<img src="/Users/kyuhyeon/Library/Application Support/typora-user-images/image-20201119221506654.png" alt="image-20201119221506654" style="zoom:25%;" />
+
+이거 빗변 피타고라스로 구하면 117.8
+xs 기준으로 반지름이 325 / 2 == 162.5 중심으로 부터 14멀어
+162.5 - 14 - 117.8 == 30.7 인데 소수점 버려
+그래서 빗변은 반지름 - 30 으로 비율 퉁
+
+https://www.appcoda.com/learnswiftui/swiftui-texteditor.html
+
+https://bigmountainstudio.wordpress.com/2020/07/26/394/
+
+![image-20201119231211299](/Users/kyuhyeon/Library/Application Support/typora-user-images/image-20201119231211299.png)
+
+```swift
+var view = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+view.backgroundColor = .black
+PlaygroundPage.current.liveView = view
+
+let triangle = CAShapeLayer()
+triangle.fillColor = UIColor.systemGreen.cgColor
+triangle.path = createRoundedTriangle(width: 220, height: 200, radius: 15)
+triangle.position = CGPoint(x: 140, y: 130)
+view.layer.addSublayer(triangle)
+
+func createRoundedTriangle(width: CGFloat, height: CGFloat, radius: CGFloat) -> CGPath {
+    let point1 = CGPoint(x: -width / 2, y: height / 2)
+    let point2 = CGPoint(x: 0, y: -height / 2)
+    let point3 = CGPoint(x: width / 2, y: height / 2)
+
+    let path = CGMutablePath()
+    path.move(to: CGPoint(x: 0, y: height / 2))
+    path.addArc(tangent1End: point1, tangent2End: point2, radius: radius)
+    path.addArc(tangent1End: point2, tangent2End: point3, radius: radius)
+    path.addArc(tangent1End: point3, tangent2End: point1, radius: radius)
+    path.closeSubpath()
+
+    return path
+}
+```
+
+https://blckbirds.com/post/drawing-in-swiftui/
+
+https://www.bigmountainstudio.com/courses/shapes/353301-episode-4-the-triangular-shape/1006402-swiftui-shapes-live-4-the-triangle-shape
+
+
+
+꼭 보자
+
+https://www.bigmountainstudio.com/courses/shapes/353301-episode-4-the-triangular-shape/1006402-swiftui-shapes-live-4-the-triangle-shape
+
 
 
 ## 11월 18일

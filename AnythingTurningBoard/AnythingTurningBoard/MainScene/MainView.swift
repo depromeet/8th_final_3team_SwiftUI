@@ -12,6 +12,8 @@ struct MainView: View {
     
     @EnvironmentObject private var viewModel: SplashViewModel
     @State private var isTest: Bool = false
+    // 2 ~ 6개 룰렛판
+    @State private var count = 6
     
     var body: some View {
         
@@ -35,8 +37,8 @@ struct MainView: View {
                         NamingView()
                             .frame(width: UIScreen.main.bounds.width, height: floor(UIScreen.main.bounds.width * 0.458666666666667))
                         
-                        RouletteView() // 375, 325 여백은 21
-                            .frame(width: UIScreen.main.bounds.width, height: floor(UIScreen.main.bounds.width * 0.866666666666667))
+                        RouletteView(count: $count) // 375, 325 여백은 21
+                            .frame(width: UIScreen.main.bounds.width - 25 - 25 , height: UIScreen.main.bounds.width - 25 - 25)
                         
                         Spacer(minLength: 21)
                         
